@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/messenger_box"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="top"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="A"
+                    android:id="@+id/userThumb"
+                    android:background="@drawable/bg_roundbutton"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:text="User Alias"
+                        android:textIsSelectable="true"
+                        android:id="@+id/messenger_alias"
+                        android:layout_margin="10dp"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/mesenger_message"
+                        android:paddingLeft="10dp"
+                        android:text="Messages will be displayed here."
+                        android:autoLink="all"
+                        android:textIsSelectable="true"
+                        android:textSize="16sp"
+                        android:linksClickable="true"
+                        android:textColorLink="@color/colorGrapeFruitDark"
+                        android:layout_width="wrap_content"
+                        android:elevation="2dp"
+                        android:layout_margin="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:text="Date and Time Sent"
+                        android:textAlignment="textEnd"
+                        android:id="@+id/messenger_datetime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">\
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:id="@+id/btn_reaction"
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:src="@drawable/reactions"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+                <TextView
+                        android:text="Reactions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:text="(0)"
+                        android:id="@+id/txt_rccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

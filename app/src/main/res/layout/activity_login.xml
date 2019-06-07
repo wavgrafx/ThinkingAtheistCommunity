@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/logo_white"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_height="60dp"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:text="Welcome to"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:text="Thinking Atheist Community"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:text="Enter your mobile number below to login or signup"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+
+            <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    app:ccpDialog_textColor="@color/colorWhite"
+                    app:ccp_defaultPhoneCode="44"
+                    android:background="@drawable/bg_edittextphone_left"
+                    app:ccp_contentColor="@color/colorWhite"
+                    app:ccp_countryPreference="gb"
+                    android:gravity="center"
+                    app:ccp_showArrow="false"
+                    app:ccp_hintExampleNumber="true"
+                    app:ccpDialog_initialScrollToSelection="true"
+                    app:ccpDialog_keyboardAutoPopup="false"
+                    android:layout_height="40dp" />
+
+
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/editTextPhone"
+                    android:layout_height="40dp"
+                    android:inputType="phone"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_edittextphone_right"
+                    android:nextFocusForward="@id/editTextCode"/>
+        </LinearLayout>
+
+
+        <Button
+                android:text="Send SMS Code"
+                android:id="@+id/btnVerify"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:background="@drawable/bg_button_normal"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:text="Enter the 6-digit PIN Code sent via SMS"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                android:id="@+id/textViewPINConfirm"
+                android:layout_height="wrap_content"/>
+
+
+        <EditText
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:inputType="number"
+                android:hint="Confirmation Code"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:ems="10"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:background="@drawable/bg_edittext"
+                android:maxLength="6"
+                android:visibility="invisible"
+                android:textSize="20sp"
+                android:id="@+id/editTextCode"
+                android:gravity="center"/>
+
+        <Button
+                android:text="Confirm"
+                android:id="@+id/btnConfirm"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:textStyle="bold"
+                android:background="@drawable/bg_button_normal"/>
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/progressBar"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"/>
+
+
+
+    </LinearLayout>
+</LinearLayout>
